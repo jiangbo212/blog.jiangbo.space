@@ -10,6 +10,12 @@ buildExpired: false
 
 # googleAnalytics: UA-123-45
 
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
 minify:
   disableXML: true
   minifyOutput: true
@@ -73,13 +79,13 @@ params:
   #   Title: "Hi there \U0001F44B"
   #   Content: Welcome to Jiang.Space
 
-  socialIcons:
-    - name: twitter
-      url: "https://twitter.com/jiangbo212"
-    # - name: stackoverflow
-    #   url: "https://stackoverflow.com"
-    - name: github
-      url: "https://github.com/jiangbo212"
+  # socialIcons:
+  #   - name: twitter
+  #     url: "https://twitter.com/jiangbo212"
+  #   # - name: stackoverflow
+  #   #   url: "https://stackoverflow.com"
+  #   - name: github
+  #     url: "https://github.com/jiangbo212"
 
   # analytics:
   #   google:
@@ -111,13 +117,21 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
+    - identifier: archives
+      name: 归档
+      url: archives/
+      weight: 5
     - identifier: categories
       name: 分类
       url: /categories/
       weight: 10
-    - identifier: tags
-      name: 标签
-      url: /tags/
+    # - identifier: tags
+    #   name: 标签
+    #   url: /tags/
+    #   weight: 20
+    - identifier: search
+      name: 搜索
+      url: search/
       weight: 20
     - identifier: hiking
       name: Hiking
