@@ -56,11 +56,11 @@ In case you need `wrangler`’s npm installer to place the binary in a non-defau
 
 - Environment variable: `WRANGLER_INSTALL_PATH`
 
-       *环境变量：*`WRANGLER_INSTALL_PATH` 
+- 环境变量：`WRANGLER_INSTALL_PATH` 
 
 - NPM configuration: `wrangler_install_path`
 
-       *NPM配置：*`wrangler_install_path` 
+- NPM配置：`wrangler_install_path` 
 
 ### Specify binary site URL （*指定二进制站点url*）
 
