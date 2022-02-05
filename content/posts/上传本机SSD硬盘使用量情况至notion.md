@@ -155,4 +155,4 @@ func AddNotionTable(written string, read string) {
 
 最终的效果如下图
 
-![效果图](/img/WX20220125-225909@2x-1024x667.png)
+![效果图](/img/WX20220125-225909@2x.png)
