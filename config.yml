@@ -28,7 +28,7 @@ params:
   author: 江波·林沂
   # author: ["Me", "You"] # multiple authors
   # images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "2006-01-02"
+  DateFormat: "2006-01-02 15:04"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
