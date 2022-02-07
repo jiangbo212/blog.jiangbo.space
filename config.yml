@@ -27,7 +27,7 @@ params:
   keywords: [徒步, 生活, 技术]
   author: 江波·林沂
   DateFormat: "2006-01-02 15:04"
-  defaultTheme: auto # dark, light
+  defaultTheme: dark # dark, light, auto
   disableThemeToggle: false
 
   ShowReadingTime: true
@@ -38,7 +38,6 @@ params:
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: true
-  disqusShortname: jiangbo212
   hidemeta: false
   hideSummary: false
   showtoc: false
@@ -57,6 +56,12 @@ params:
     text: "江波·林沂"
     icon: img/favicons/favicon-32x32.png
     iconHeight: 35
+
+  utteranc:
+    enable: true
+    repo: jiangbo212/jiangbo212.github.io
+    issueTerm: title
+    theme: github-dark
 
   # profile-mode
   profileMode:
