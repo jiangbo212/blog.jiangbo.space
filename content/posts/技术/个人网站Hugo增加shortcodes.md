@@ -19,19 +19,19 @@ hugo添加Shortcodes的方式如下：
 
 + 找到你对应的hugo主题下的layouts>shortcodes目录。在目录下新建你自定义的html文件, 并在里面添加自定义的html代码。例如新加了文件imgda.html.
 
-    ```
-        <p style="text-align:{{ index .Params 0 }};font-size:0.5em;">{{ index .Params 1 | markdownify }}</p>
-    ```
+```
+    <p style="text-align:{{ index .Params 0 }};font-size:0.5em;">{{ index .Params 1 | markdownify }}</p>
+```
 
-+ 直接在md中使用的shortcodes即可。
++ 直接在md中使用的shortcodes即可。请忽略下方代码的\
     
-    ```
-        {{<imgda center 测试>}}
-    ```
+```
+    \{\{\<imgda center 测试\>\}\}
+```
 
 + 最终在页面上展示的代码将变为如下形式。
   
-  ```
-        <p style="text-align:center;font-size:0.5em;">测试</p>
-  ```
+```
+    <p style="text-align:center;font-size:0.5em;">测试</p>
+```
 这样一波下来，完美解决我的图片描述不显示的问题。有相同需求的同学都可以用我这种方式试试。
