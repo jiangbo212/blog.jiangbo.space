@@ -3,6 +3,7 @@ title: "自定义推送消息至自己的apple设备"
 date: 2022-01-26T16:11:08+08:00
 draft: false
 categories: 技术
+keywords: bark 推送 ios 苹果通知 apple通知 系统通知
 ---
 今天逛v2ex时，看到了一个之前自己有想法但是一直没动手的应用。bark，可以让用户在没有自己的app的前提下，推送消息到个人的apple设备。
 

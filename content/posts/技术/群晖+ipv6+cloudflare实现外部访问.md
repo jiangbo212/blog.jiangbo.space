@@ -3,6 +3,7 @@ title: "群晖+ipv6+cloudflare实现外部访问"
 date: 2022-01-27T17:52:12+08:00
 draft: false
 categories: 技术
+keywords: 群晖 cloudflare ddns 域名 dns ipv6 v4/v6 cdn
 ---
 
 前提🎈🎈🎈🎈🎈🎈：拥有自己的域名。
@@ -33,9 +34,9 @@ categories: 技术
 
 
 
-一个是如果你的网站是http，而你在cloudflare上勾选了强制https的话。那么你的网站可能会有一定几率报错。因为网站上的某些连接并不支持强制https。我这里的wordpress就遇到了这种情况。解决方案就是上插件。worepress插件<a href="https://cn.wordpress.org/plugins/really-simple-ssl/" target="_blank" rel="noopener">really simple ssl</a>非常好用，安装完之后，网站就再也没有遇到这个错误了。
+一个是如果你的网站是http，而你在cloudflare上勾选了强制https的话。那么你的网站可能会有一定几率报错。因为网站上的某些连接并不支持强制https。我这里的wordpress就遇到了这种情况。解决方案就是上插件。worepress插件[really-simple-ssl](https://cn.wordpress.org/plugins/really-simple-ssl/)非常好用，安装完之后，网站就再也没有遇到这个错误了。
 
 
 
-第二个就是cloudflare上的DNS解析的DDNS问题了。一般家庭宽带是没有固定的ip的。即使ipv6运营商也没有给固定的。这个时候就需要DDNS解决这个问题了。这个大家可以参考<a href="https://github.com/timothymiller/cloudflare-ddns" target="_blank" rel="noopener">cloudflare-ddns</a>，非常好用，配置也简单。docker和linux-cron用起来都是很简单的。
+第二个就是cloudflare上的DNS解析的DDNS问题了。一般家庭宽带是没有固定的ip的。即使ipv6运营商也没有给固定的。这个时候就需要DDNS解决这个问题了。这个大家可以参考 [cloudflare-ddns](https://github.com/timothymiller/cloudflare-ddns), 非常好用，配置也简单。docker和linux-cron用起来都是很简单的。
 

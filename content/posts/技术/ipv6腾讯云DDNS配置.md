@@ -3,6 +3,7 @@ title: "Ipv6腾讯云DDNS配置"
 date: 2022-01-25T22:42:47+08:00
 draft: false
 categories: 技术
+keywords: ipv6 腾讯云 ddns 群晖 clash 域名 ubuntu docker 主机网络
 ---
 
 自从家里的设备全部支持ipv6后(如何支持见上文), 怎么说呢，就一发不可收拾了。总想着尽可能的利用起来ipv6。想起来自己还有个域名，就尝试着试试看能不能让自己的域名仅支持ipv6。

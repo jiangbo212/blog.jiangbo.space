@@ -3,6 +3,7 @@ title: "上传本机SSD硬盘使用量情况至notion"
 date: 2022-01-25T23:00:59+08:00
 draft: false
 categories: 技术
+keywords: notion M1 MAC SSD 硬盘 写入量 报废
 ---
 
 M1的Mac有个让人比较关注的点，就是它的ssd硬盘的写入量相比于以前有个很大的提高。写入量的提高可能会导致磁盘提前报废，之前也在网络上引起了很大的讨论。
