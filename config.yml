@@ -54,7 +54,7 @@ params:
 
   label:
     text: "江波·林沂"
-    icon: img/favicons/favicon-32x32.png
+    icon: /img/favicons/favicon-32x32.png
     iconHeight: 35
 
   utteranc:
