@@ -5,7 +5,7 @@ draft: false
 categories: 知识点整理
 keywords: ES Elastic 面试 索引 translog segment flush fsync Replica LogStash 倒排索引 
 ---
-+ ### ES的基础概念
++ #### ES的基础概念
   1. Near Realtime(NRT) 近实时，ES是一个近实时的搜索服务。数据提交索引之后可以立即搜索到。为什么近实时可参考下文中的ES索引文档过程。
   2. Cluster 集群。一个集群由一个唯一的名字标识，默认为"elasticsearch".集群名称非常重要，具有相同集群名称的节点才能组成一个集群。集群名称在配置文件中指定。
   3. Node 节点。存储集群的数据，参与集群的索引和搜索功能。节点有自己的名称，启动时会以一个随机的UUID的前七个字符作为节点的名字，也可以指定任意的名字。通过集群名在网络中发现同伴组成集群。一个节点也可是集群。
@@ -16,11 +16,11 @@ keywords: ES Elastic 面试 索引 translog segment flush fsync Replica LogStash
   8. Segments. Shard中包含了很多的Segments。ES的底层数据结构就保存在Segments中。比如，倒排索引(Inverted Index)， Stored Fields， Document Values， Cache。
   9. Replication 备份: 一个分片可以有多个备份（副本）
 
-+ ### ES的底层实现Luence, 倒排索引(Inverted Index)
++ #### ES的底层实现Luence, 倒排索引(Inverted Index)
   1. 一个有序的数据字典Dictionary（包括单词Term和它出现的频率）
   2. 与单词Term对应的Postings（即存在这个单词的文件）
 
-+ ### es索引文档过程
++ #### es索引文档过程
 
   1. es节点写入请求过程。write→refresh→flush→merge 
 
@@ -30,25 +30,25 @@ keywords: ES Elastic 面试 索引 translog segment flush fsync Replica LogStash
 
   4. refresh过程中，每次会产生一个小的segment。由于是每秒刷新一次，过多的小的segment会影响系统性能，因此 es会不断的通过定时任务去合并小的segment。此过程可称之为merge。
 
-+ ### es的translog机制
++ #### es的translog机制
   
   flush过程中，内存中的缓存也会被清理，内容会被写入一个新段(segment), 段的fsync将创建一个新的提交点并将内容刷新到磁盘，旧的translog将被删除并重新开始一个新的translog。translog本质是一个日志文件，通过检查点来进行日志恢复。translog默认为每个请求时候进行一次fsync写入磁盘，这个可以强一致性的保证数据不丢失,但如此会影响性能. 如果对数据丢失有一定容忍，那么可以配置async，对其进行异步刷新。
 
-+ ### es中的Replica(副本)机制
++ #### es中的Replica(副本)机制
   
   es包含一个主分片及多个副本分片，由此来保证分布式。索引文档时，写入主片及多个副本分片(副本分片为并发写入)；读取时，只需其中一个返回即可返回结果。
 
-+ ### ES常见的非常理情景
++ #### ES常见的非常理情景
   1. 为什么添加文档时可能会导致存储空间的减少？
     答：ES在添加文档时，可能会合并过多的小的segments，从而导致空间占用的减少。
 
-+ ### ES常见的合理利用场景
++ #### ES常见的合理利用场景
   1. 根据日期建立索引。常见使用场景为交易数据，日志数据。尤其是在需求在于根据日期查询的场景下。这样做的好处在于可以很快的拉取数据及删除过去数据。
 
-+ ### LogStash。LogStash在ES的生态中基本是必不可少的。ES的数据一般不会直接写入，都是有第三方系统推送过来的。推送大部分情况下都是由LogStash来进行的。LogStash由如下几个好处：
++ #### LogStash。LogStash在ES的生态中基本是必不可少的。ES的数据一般不会直接写入，都是有第三方系统推送过来的。推送大部分情况下都是由LogStash来进行的。LogStash由如下几个好处：
   1. Logstash具有基于磁盘的自适应缓冲系统，该系统将吸收传入的吞吐量，从而减轻背压
   2. 从其他数据源（例如数据库，S3或消息传递队列）中提取
   3. 将数据发送到多个目的地，例如S3，HDFS或写入文件
   4. 使用条件数据流逻辑组成更复杂的处理管道
 
-+ ### 
++ #### 
