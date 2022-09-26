@@ -11,7 +11,7 @@ keywords: Rust Automata fst RocksDB 状态机 有限状态机 倒排索引 Lucen
 
 It turns out that finite state machines are useful for things other than expressing computation. Finite state machines can also be used to compactly represent ordered sets or maps of strings that can be searched very quickly.
 
-在本文中，我将向您介绍有限状态机作为表示有序集和映射的数据结构。这包括引入一个用 Rust 编写的实现，称为 fst crate。它带有完整的 API 文档。我还将向您展示如何使用简单的命令行工具构建它们。最后，我将讨论一些实验，最终从 2015 年 7 月的 Common Crawl Archive 中索引超过 1,600,000,000 个 URL（134 GB）
+在本文中，我将向您介绍有限状态机作为表示有序集合和映射的数据结构。这包括引入一个用 Rust 编写的实现，称为 fst crate。它带有完整的 API 文档。我还将向您展示如何使用简单的命令行工具构建它们。最后，我将讨论一些实验，最终从 2015 年 7 月的 Common Crawl Archive 中索引超过 1,600,000,000 个 URL（134 GB）
 
 In this article, I will teach you about finite state machines as a data structure for representing ordered sets and maps.  This includes introducing an implementation written in Rust called the fst crate. It comes with complete API documentation.I will also show you how to build them using a simple command line tool. Finally, I will discuss a few experiments culminating in indexing over 1,600,000,000 URLs (134 GB) from the July 2015 Common Crawl Archive.
 
@@ -27,9 +27,9 @@ Along the way, we will talk about memory maps, automaton intersection with regul
 
 Target audience: Some familiarity with programming and fundamental data structures. No experience with automata theory or Rust is required.
 
-Teaser(预备)
+前序(Teaser)
 
-作为展示我们前进方向的预告片，让我们快速浏览一个示例。我们还不会看到 1,600,000,000 个字符串。相反，请考虑大约 16,000,000 条维基百科文章标题 (384 MB)。以下是索引它们的方法:
+作为展示我们前进方向的前序，让我们快速浏览一个示例。我们还不会看到 1,600,000,000 个字符串。相反，请考虑大约 16,000,000 条维基百科文章标题 (384 MB)。以下是索引它们的方法:
 
 As a teaser to show where we’re headed, let’s take a quick look at an example. We won’t look at 1,600,000,000 strings quite yet. Instead, consider ~16,000,000 Wikipedia article titles (384 MB). Here’s how to index them:
 
