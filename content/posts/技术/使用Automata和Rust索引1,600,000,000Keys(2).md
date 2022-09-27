@@ -50,10 +50,10 @@ Cauchy的有限状态机可以在给定输入序列的情况下执行计算。�
 
 Cauchy’s finite state machine can perform computation given a sequence of inputs. For example, consider the following inputs:
 
-food is served 提供食物
-loud noise 巨响
-quiet calm 安静平静
-food digests 食物消化
++ food is served 提供食物
++ loud noise 巨响
++ quiet calm 安静平静
++ food digests 食物消化
 
 如果我们将这些输入应用到上面的机器上，那么 Cauchy 将依次经历以下状态：“睡着”、“吃”、“隐藏”、“吃”、“猫砂箱”。因此，如果我们观察到食物送达，然后是一声巨响，然后是安静的平静，最后是Cauchy的消化，那么我们可以得出结论，Cauchy目前在猫砂箱里。
 
