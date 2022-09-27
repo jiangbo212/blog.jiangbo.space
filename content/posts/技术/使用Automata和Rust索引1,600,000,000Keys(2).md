@@ -6,6 +6,8 @@ categories: 技术
 keywords: Rust Automata fst RocksDB 状态机 有限状态机 倒排索引 Lucene 有序集合
 ---
 
+[原文链接](https://blog.burntsushi.net/transducers/)
+
 ### 目录 (Table of Contents)
 
 这篇文章很长，所以我整理了一个目录，以防你想跳过。
