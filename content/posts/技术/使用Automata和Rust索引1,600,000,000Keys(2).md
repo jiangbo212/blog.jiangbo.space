@@ -10,7 +10,7 @@ keywords: Rust Automata fst RocksDB 状态机 有限状态机 倒排索引 Lucen
 
 ### 目录 (Table of Contents)
 
-这篇文章很长，所以我整理了一个目录，以防你想跳过。
+这篇文章很长，所以我整理了一个目录, 如果你想跳过某些内容。
 
 This article is pretty long, so I’ve put together a table of contents in case you want to skip around.
 
