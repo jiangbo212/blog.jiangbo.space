@@ -6,7 +6,7 @@ categories: 技术
 keywords: Rust Automata fst RocksDB 状态机 有限状态机 倒排索引 Lucene 有序集合 fsa crate
 ---
 
-fst库是"使用Automata和Rust索引1,600,000,000Keys"作者所建立的实现其博客思想的rust。作者文章的后续就是针对其博客思想的构建历程，我们在这里先插入一下，作者实现的这个库的一些主要功能，方便理解作者后续的思想。[原文地址](https://docs.rs/fst/latest/fst/index.html)
+fst库是"使用Automata和Rust索引1,600,000,000Keys"作者所建立的实现其博客思想的库。作者文章的后续就是针对其博客思想的构建历程，我们在这里先插入一下作者实现的这个库的一些主要功能，方便理解作者后续的思想。[原文地址](https://docs.rs/fst/latest/fst/index.html)
 
 fst是一个用于有效存储和搜索有序集合或者key是字符串的map的库。这个crate的一个关键设计目标是支持存储和搜索非常大的集合或map（即数十亿）。这意味着已经付出了很多努力来确保所有操作都是内存高效的。
 
