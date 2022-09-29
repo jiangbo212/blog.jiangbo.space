@@ -2,7 +2,6 @@
 title: "使用Automata和Rust索引1,600,000,000Keys(3)"
 date: 2022-09-28T09:44:02+08:00
 draft: false
-draft: false
 categories: 技术
 keywords: Rust Automata fst RocksDB 状态机 有限状态机 倒排索引 Lucene 有序集合 fsa
 ---
