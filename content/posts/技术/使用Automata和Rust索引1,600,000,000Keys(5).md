@@ -6,7 +6,7 @@ categories: 技术
 keywords: Rust Automata fst RocksDB 状态机 有限状态机 倒排索引 Lucene 有序集合 fsa
 ---
 
-FST构造
+### FST构造
 
 构造确定性非循环有限状态转换器的工作方式与构造确定性非循环有限状态接受器的工作方式大致相同。关键区别在于转换时输出的放置和共享。
 
