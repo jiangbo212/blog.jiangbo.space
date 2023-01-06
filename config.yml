@@ -59,7 +59,7 @@ params:
 
   utteranc:
     enable: true
-    repo: jiangbo212/jiangbo212.github.io
+    repo: jiangbo212/blog.jiangbo.space
     issueTerm: title
     theme: github-dark
 
