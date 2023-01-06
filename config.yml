@@ -95,6 +95,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
+    - identifier: index
+      name: 首页
+      url: /
+      weight: 1
     - identifier: archives
       name: 归档
       url: archives/
@@ -111,7 +115,3 @@ menu:
       name: 搜索
       url: search/
       weight: 20
-    - identifier: hiking
-      name: Hiking
-      url: https://hiking.jiangbo.space
-      weight: 30
