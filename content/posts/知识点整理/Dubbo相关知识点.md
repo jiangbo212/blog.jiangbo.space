@@ -1,7 +1,7 @@
 ---
 title: "Dubbo相关知识点"
 date: 2022-02-09T10:57:14+08:00
-draft: true
+draft: false
 categories: 知识点整理
 keywords: Dubbo SPI 服务治理 SOA 负载均衡 应用维度注册 接口维度注册
 ---
